@@ -40,7 +40,7 @@
         </ol>
         <hr />
         <h2>Formulario de inscripción</h2>
-        <form onsubmit="event.preventDefault(); addPartici()">
+        <form id="formulario">
             <div class="form-group">
                 <label for="nit">NIT</label>
                 <input type="text" class="form-control" id="nit" placeholder="Número de Identificación Tributaria">
@@ -49,25 +49,25 @@
                 <label for="razonsocial">Razón Social</label>
                 <input type="text" class="form-control" id="razonsocial" placeholder="Nombre del participante">
             </div>
-            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <button type="submit" class="btn btn-primary" onclick="registrarse()">Registrarse</button>
         </form>
         <hr />
-    <div>
-        <h2>Listado de ofertas</h2>
-        <!--Reemplace estos párrafos por las ofertas reales recibidas-->
-        <p>Consorcio F&R [Oferta no aceptada]</p>
-        <p>Grupo Fernánez Gómez [Oferta no aceptada]</p>
-        <p>Unión Temporal Sinergia [Oferta no aceptada]</p>
-        <p>Grupo DRFE [<strong>Oferta aceptada. Valor: $168.054.320</strong>]</p>
-        <button type="submit" class="btn btn-primary" disabled="disabled">Ofertar</button>
-    </div>
+        <div>
+            <h2>Listado de ofertas</h2>
+            <div id="campofertas" >
+            </div>
+                <button id="btnofertar"type="submit" class="btn btn-primary" disabled="true" onclick="ofertar()">Ofertar</button>
+            
+            
+            
+        </div>
     </div>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src ="/socket.io/socket.io.js"></script>
-    <script src = "/javascripts/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
